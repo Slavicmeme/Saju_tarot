@@ -10,9 +10,23 @@ from app.services.tarot_meanings import meaning_for
 from app.services.tarot_draw_service import SPREAD_DETAILS
 from app.services.spread_analysis import analyze_spread
 import logging
+import json
+import httpx
 
 KST = timezone(timedelta(hours=9))
 logger = logging.getLogger("saju_tarot.reading")
+
+def classify_llm_error(error: Exception) -> dict:
+    if isinstance(error, httpx.TimeoutException):
+        return {"code": "timeout", "message": "AI가 제한 시간 안에 응답을 마치지 못해 보조 해석으로 전환했습니다."}
+    if isinstance(error, httpx.HTTPStatusError):
+        status = error.response.status_code
+        return {"code": f"api_http_{status}", "message": f"AI API가 HTTP {status} 오류를 반환해 보조 해석으로 전환했습니다."}
+    if isinstance(error, json.JSONDecodeError):
+        return {"code": "invalid_json", "message": "AI 응답이 완전한 JSON 형식이 아니어서 보조 해석으로 전환했습니다."}
+    if isinstance(error, ValueError):
+        return {"code": "missing_fields", "message": "AI 응답에서 필수 해석 항목이 누락되어 보조 해석으로 전환했습니다."}
+    return {"code": type(error).__name__.lower(), "message": "AI 해석 처리 중 오류가 발생해 보조 해석으로 전환했습니다."}
 
 def fallback_reading(request, saju, cards):
     names = [f"{c['name_ko']}({'정방향' if c['orientation']=='upright' else '역방향'})" for c in cards]
@@ -49,15 +63,20 @@ async def create_reading(request):
                       "keywords": meta["keywords"][selected.orientation], "meaning": meaning_for(selected.card_id, selected.orientation, request.category), "context": context})
     pattern_analysis = analyze_spread(cards, saju)
     system, prompt = build_prompt(request, saju, cards, pattern_analysis)
+    llm_diagnostic = None
     try:
         reading = await generate(system, prompt) or fallback_reading(request, saju, cards)
         mode = "llm" if get_llm_enabled() else "fallback"
+        if mode == "fallback":
+            llm_diagnostic = {"code": "not_configured", "message": "LLM API 키가 설정되지 않아 보조 해석을 사용했습니다."}
     except Exception as error:
-        logger.warning("LLM generation failed; using fallback error_type=%s", type(error).__name__)
+        llm_diagnostic = classify_llm_error(error)
+        logger.warning("LLM generation failed; using fallback error_type=%s diagnostic_code=%s", type(error).__name__, llm_diagnostic["code"])
         reading, mode = fallback_reading(request, saju, cards), "fallback_after_llm_error"
     result_id = str(uuid4())
     payload = {"result_id": result_id, "created_at": datetime.now(KST).isoformat(), "input": request.model_dump(mode="json"),
-               "saju_result": saju, "cards": [{k: v for k, v in c.items() if k != "context"} for c in cards], "reading": reading, "mode": mode}
+               "saju_result": saju, "cards": [{k: v for k, v in c.items() if k != "context"} for c in cards], "reading": reading,
+               "mode": mode, "llm_diagnostic": llm_diagnostic}
     save_result(result_id, payload)
     return payload
 

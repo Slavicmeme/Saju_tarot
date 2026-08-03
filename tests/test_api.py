@@ -37,6 +37,7 @@ def test_reading_flow_and_result(tmp_path, monkeypatch):
     assert reading["card_combinations"]
     assert reading["saju_overlay"]
     assert set(reading["scenario_paths"]) == {"current_path", "adjusted_path"}
+    assert stored.json()["llm_diagnostic"]["code"] == "not_configured"
     assert client.get(f"/results/{result_id}").status_code == 200
 
 def test_future_birth_and_duplicate_cards_fail():
