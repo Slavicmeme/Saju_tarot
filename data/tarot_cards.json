@@ -1,0 +1,1562 @@
+[
+    {
+        "id":  "00_the_fool",
+        "name_ko":  "바보",
+        "name_en":  "The Fool",
+        "arcana":  "major",
+        "image_url":  "/static/images/rws/00_the_fool.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/00_the_fool.svg"
+    },
+    {
+        "id":  "01_the_magician",
+        "name_ko":  "마법사",
+        "name_en":  "The Magician",
+        "arcana":  "major",
+        "image_url":  "/static/images/rws/01_the_magician.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/01_the_magician.svg"
+    },
+    {
+        "id":  "02_the_high_priestess",
+        "name_ko":  "여사제",
+        "name_en":  "The High Priestess",
+        "arcana":  "major",
+        "image_url":  "/static/images/rws/02_the_high_priestess.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/02_the_high_priestess.svg"
+    },
+    {
+        "id":  "03_the_empress",
+        "name_ko":  "여황제",
+        "name_en":  "The Empress",
+        "arcana":  "major",
+        "image_url":  "/static/images/rws/03_the_empress.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/03_the_empress.svg"
+    },
+    {
+        "id":  "04_the_emperor",
+        "name_ko":  "황제",
+        "name_en":  "The Emperor",
+        "arcana":  "major",
+        "image_url":  "/static/images/rws/04_the_emperor.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/04_the_emperor.svg"
+    },
+    {
+        "id":  "05_the_hierophant",
+        "name_ko":  "교황",
+        "name_en":  "The Hierophant",
+        "arcana":  "major",
+        "image_url":  "/static/images/rws/05_the_hierophant.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/05_the_hierophant.svg"
+    },
+    {
+        "id":  "06_the_lovers",
+        "name_ko":  "연인",
+        "name_en":  "The Lovers",
+        "arcana":  "major",
+        "image_url":  "/static/images/rws/06_the_lovers.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/06_the_lovers.svg"
+    },
+    {
+        "id":  "07_the_chariot",
+        "name_ko":  "전차",
+        "name_en":  "The Chariot",
+        "arcana":  "major",
+        "image_url":  "/static/images/rws/07_the_chariot.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/07_the_chariot.svg"
+    },
+    {
+        "id":  "08_strength",
+        "name_ko":  "힘",
+        "name_en":  "Strength",
+        "arcana":  "major",
+        "image_url":  "/static/images/rws/08_strength.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/08_strength.svg"
+    },
+    {
+        "id":  "09_the_hermit",
+        "name_ko":  "은둔자",
+        "name_en":  "The Hermit",
+        "arcana":  "major",
+        "image_url":  "/static/images/rws/09_the_hermit.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/09_the_hermit.svg"
+    },
+    {
+        "id":  "10_wheel_of_fortune",
+        "name_ko":  "운명의 수레바퀴",
+        "name_en":  "Wheel of Fortune",
+        "arcana":  "major",
+        "image_url":  "/static/images/rws/10_wheel_of_fortune.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/10_wheel_of_fortune.svg"
+    },
+    {
+        "id":  "11_justice",
+        "name_ko":  "정의",
+        "name_en":  "Justice",
+        "arcana":  "major",
+        "image_url":  "/static/images/rws/11_justice.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/11_justice.svg"
+    },
+    {
+        "id":  "12_the_hanged_man",
+        "name_ko":  "매달린 사람",
+        "name_en":  "The Hanged Man",
+        "arcana":  "major",
+        "image_url":  "/static/images/rws/12_the_hanged_man.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/12_the_hanged_man.svg"
+    },
+    {
+        "id":  "13_death",
+        "name_ko":  "죽음",
+        "name_en":  "Death",
+        "arcana":  "major",
+        "image_url":  "/static/images/rws/13_death.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/13_death.svg"
+    },
+    {
+        "id":  "14_temperance",
+        "name_ko":  "절제",
+        "name_en":  "Temperance",
+        "arcana":  "major",
+        "image_url":  "/static/images/rws/14_temperance.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/14_temperance.svg"
+    },
+    {
+        "id":  "15_the_devil",
+        "name_ko":  "악마",
+        "name_en":  "The Devil",
+        "arcana":  "major",
+        "image_url":  "/static/images/rws/15_the_devil.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/15_the_devil.svg"
+    },
+    {
+        "id":  "16_the_tower",
+        "name_ko":  "탑",
+        "name_en":  "The Tower",
+        "arcana":  "major",
+        "image_url":  "/static/images/rws/16_the_tower.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/16_the_tower.svg"
+    },
+    {
+        "id":  "17_the_star",
+        "name_ko":  "별",
+        "name_en":  "The Star",
+        "arcana":  "major",
+        "image_url":  "/static/images/rws/17_the_star.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/17_the_star.svg"
+    },
+    {
+        "id":  "18_the_moon",
+        "name_ko":  "달",
+        "name_en":  "The Moon",
+        "arcana":  "major",
+        "image_url":  "/static/images/rws/18_the_moon.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/18_the_moon.svg"
+    },
+    {
+        "id":  "19_the_sun",
+        "name_ko":  "태양",
+        "name_en":  "The Sun",
+        "arcana":  "major",
+        "image_url":  "/static/images/rws/19_the_sun.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/19_the_sun.svg"
+    },
+    {
+        "id":  "20_judgement",
+        "name_ko":  "심판",
+        "name_en":  "Judgement",
+        "arcana":  "major",
+        "image_url":  "/static/images/rws/20_judgement.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/20_judgement.svg"
+    },
+    {
+        "id":  "21_the_world",
+        "name_ko":  "세계",
+        "name_en":  "The World",
+        "arcana":  "major",
+        "image_url":  "/static/images/rws/21_the_world.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/21_the_world.svg"
+    },
+    {
+        "id":  "22_ace_of_wands",
+        "name_ko":  "완드 에이스",
+        "name_en":  "Ace of Wands",
+        "arcana":  "wands",
+        "image_url":  "/static/images/rws/22_ace_of_wands.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/22_ace_of_wands.svg"
+    },
+    {
+        "id":  "23_two_of_wands",
+        "name_ko":  "완드 2",
+        "name_en":  "Two of Wands",
+        "arcana":  "wands",
+        "image_url":  "/static/images/rws/23_two_of_wands.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/23_two_of_wands.svg"
+    },
+    {
+        "id":  "24_three_of_wands",
+        "name_ko":  "완드 3",
+        "name_en":  "Three of Wands",
+        "arcana":  "wands",
+        "image_url":  "/static/images/rws/24_three_of_wands.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/24_three_of_wands.svg"
+    },
+    {
+        "id":  "25_four_of_wands",
+        "name_ko":  "완드 4",
+        "name_en":  "Four of Wands",
+        "arcana":  "wands",
+        "image_url":  "/static/images/rws/25_four_of_wands.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/25_four_of_wands.svg"
+    },
+    {
+        "id":  "26_five_of_wands",
+        "name_ko":  "완드 5",
+        "name_en":  "Five of Wands",
+        "arcana":  "wands",
+        "image_url":  "/static/images/rws/26_five_of_wands.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/26_five_of_wands.svg"
+    },
+    {
+        "id":  "27_six_of_wands",
+        "name_ko":  "완드 6",
+        "name_en":  "Six of Wands",
+        "arcana":  "wands",
+        "image_url":  "/static/images/rws/27_six_of_wands.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/27_six_of_wands.svg"
+    },
+    {
+        "id":  "28_seven_of_wands",
+        "name_ko":  "완드 7",
+        "name_en":  "Seven of Wands",
+        "arcana":  "wands",
+        "image_url":  "/static/images/rws/28_seven_of_wands.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/28_seven_of_wands.svg"
+    },
+    {
+        "id":  "29_eight_of_wands",
+        "name_ko":  "완드 8",
+        "name_en":  "Eight of Wands",
+        "arcana":  "wands",
+        "image_url":  "/static/images/rws/29_eight_of_wands.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/29_eight_of_wands.svg"
+    },
+    {
+        "id":  "30_nine_of_wands",
+        "name_ko":  "완드 9",
+        "name_en":  "Nine of Wands",
+        "arcana":  "wands",
+        "image_url":  "/static/images/rws/30_nine_of_wands.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/30_nine_of_wands.svg"
+    },
+    {
+        "id":  "31_ten_of_wands",
+        "name_ko":  "완드 10",
+        "name_en":  "Ten of Wands",
+        "arcana":  "wands",
+        "image_url":  "/static/images/rws/31_ten_of_wands.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/31_ten_of_wands.svg"
+    },
+    {
+        "id":  "32_page_of_wands",
+        "name_ko":  "완드 페이지",
+        "name_en":  "Page of Wands",
+        "arcana":  "wands",
+        "image_url":  "/static/images/rws/32_page_of_wands.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/32_page_of_wands.svg"
+    },
+    {
+        "id":  "33_knight_of_wands",
+        "name_ko":  "완드 나이트",
+        "name_en":  "Knight of Wands",
+        "arcana":  "wands",
+        "image_url":  "/static/images/rws/33_knight_of_wands.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/33_knight_of_wands.svg"
+    },
+    {
+        "id":  "34_queen_of_wands",
+        "name_ko":  "완드 퀸",
+        "name_en":  "Queen of Wands",
+        "arcana":  "wands",
+        "image_url":  "/static/images/rws/34_queen_of_wands.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/34_queen_of_wands.svg"
+    },
+    {
+        "id":  "35_king_of_wands",
+        "name_ko":  "완드 킹",
+        "name_en":  "King of Wands",
+        "arcana":  "wands",
+        "image_url":  "/static/images/rws/35_king_of_wands.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/35_king_of_wands.svg"
+    },
+    {
+        "id":  "36_ace_of_cups",
+        "name_ko":  "컵 에이스",
+        "name_en":  "Ace of Cups",
+        "arcana":  "cups",
+        "image_url":  "/static/images/rws/36_ace_of_cups.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/36_ace_of_cups.svg"
+    },
+    {
+        "id":  "37_two_of_cups",
+        "name_ko":  "컵 2",
+        "name_en":  "Two of Cups",
+        "arcana":  "cups",
+        "image_url":  "/static/images/rws/37_two_of_cups.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/37_two_of_cups.svg"
+    },
+    {
+        "id":  "38_three_of_cups",
+        "name_ko":  "컵 3",
+        "name_en":  "Three of Cups",
+        "arcana":  "cups",
+        "image_url":  "/static/images/rws/38_three_of_cups.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/38_three_of_cups.svg"
+    },
+    {
+        "id":  "39_four_of_cups",
+        "name_ko":  "컵 4",
+        "name_en":  "Four of Cups",
+        "arcana":  "cups",
+        "image_url":  "/static/images/rws/39_four_of_cups.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/39_four_of_cups.svg"
+    },
+    {
+        "id":  "40_five_of_cups",
+        "name_ko":  "컵 5",
+        "name_en":  "Five of Cups",
+        "arcana":  "cups",
+        "image_url":  "/static/images/rws/40_five_of_cups.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/40_five_of_cups.svg"
+    },
+    {
+        "id":  "41_six_of_cups",
+        "name_ko":  "컵 6",
+        "name_en":  "Six of Cups",
+        "arcana":  "cups",
+        "image_url":  "/static/images/rws/41_six_of_cups.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/41_six_of_cups.svg"
+    },
+    {
+        "id":  "42_seven_of_cups",
+        "name_ko":  "컵 7",
+        "name_en":  "Seven of Cups",
+        "arcana":  "cups",
+        "image_url":  "/static/images/rws/42_seven_of_cups.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/42_seven_of_cups.svg"
+    },
+    {
+        "id":  "43_eight_of_cups",
+        "name_ko":  "컵 8",
+        "name_en":  "Eight of Cups",
+        "arcana":  "cups",
+        "image_url":  "/static/images/rws/43_eight_of_cups.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/43_eight_of_cups.svg"
+    },
+    {
+        "id":  "44_nine_of_cups",
+        "name_ko":  "컵 9",
+        "name_en":  "Nine of Cups",
+        "arcana":  "cups",
+        "image_url":  "/static/images/rws/44_nine_of_cups.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/44_nine_of_cups.svg"
+    },
+    {
+        "id":  "45_ten_of_cups",
+        "name_ko":  "컵 10",
+        "name_en":  "Ten of Cups",
+        "arcana":  "cups",
+        "image_url":  "/static/images/rws/45_ten_of_cups.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/45_ten_of_cups.svg"
+    },
+    {
+        "id":  "46_page_of_cups",
+        "name_ko":  "컵 페이지",
+        "name_en":  "Page of Cups",
+        "arcana":  "cups",
+        "image_url":  "/static/images/rws/46_page_of_cups.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/46_page_of_cups.svg"
+    },
+    {
+        "id":  "47_knight_of_cups",
+        "name_ko":  "컵 나이트",
+        "name_en":  "Knight of Cups",
+        "arcana":  "cups",
+        "image_url":  "/static/images/rws/47_knight_of_cups.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/47_knight_of_cups.svg"
+    },
+    {
+        "id":  "48_queen_of_cups",
+        "name_ko":  "컵 퀸",
+        "name_en":  "Queen of Cups",
+        "arcana":  "cups",
+        "image_url":  "/static/images/rws/48_queen_of_cups.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/48_queen_of_cups.svg"
+    },
+    {
+        "id":  "49_king_of_cups",
+        "name_ko":  "컵 킹",
+        "name_en":  "King of Cups",
+        "arcana":  "cups",
+        "image_url":  "/static/images/rws/49_king_of_cups.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/49_king_of_cups.svg"
+    },
+    {
+        "id":  "50_ace_of_swords",
+        "name_ko":  "소드 에이스",
+        "name_en":  "Ace of Swords",
+        "arcana":  "swords",
+        "image_url":  "/static/images/rws/50_ace_of_swords.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/50_ace_of_swords.svg"
+    },
+    {
+        "id":  "51_two_of_swords",
+        "name_ko":  "소드 2",
+        "name_en":  "Two of Swords",
+        "arcana":  "swords",
+        "image_url":  "/static/images/rws/51_two_of_swords.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/51_two_of_swords.svg"
+    },
+    {
+        "id":  "52_three_of_swords",
+        "name_ko":  "소드 3",
+        "name_en":  "Three of Swords",
+        "arcana":  "swords",
+        "image_url":  "/static/images/rws/52_three_of_swords.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/52_three_of_swords.svg"
+    },
+    {
+        "id":  "53_four_of_swords",
+        "name_ko":  "소드 4",
+        "name_en":  "Four of Swords",
+        "arcana":  "swords",
+        "image_url":  "/static/images/rws/53_four_of_swords.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/53_four_of_swords.svg"
+    },
+    {
+        "id":  "54_five_of_swords",
+        "name_ko":  "소드 5",
+        "name_en":  "Five of Swords",
+        "arcana":  "swords",
+        "image_url":  "/static/images/rws/54_five_of_swords.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/54_five_of_swords.svg"
+    },
+    {
+        "id":  "55_six_of_swords",
+        "name_ko":  "소드 6",
+        "name_en":  "Six of Swords",
+        "arcana":  "swords",
+        "image_url":  "/static/images/rws/55_six_of_swords.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/55_six_of_swords.svg"
+    },
+    {
+        "id":  "56_seven_of_swords",
+        "name_ko":  "소드 7",
+        "name_en":  "Seven of Swords",
+        "arcana":  "swords",
+        "image_url":  "/static/images/rws/56_seven_of_swords.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/56_seven_of_swords.svg"
+    },
+    {
+        "id":  "57_eight_of_swords",
+        "name_ko":  "소드 8",
+        "name_en":  "Eight of Swords",
+        "arcana":  "swords",
+        "image_url":  "/static/images/rws/57_eight_of_swords.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/57_eight_of_swords.svg"
+    },
+    {
+        "id":  "58_nine_of_swords",
+        "name_ko":  "소드 9",
+        "name_en":  "Nine of Swords",
+        "arcana":  "swords",
+        "image_url":  "/static/images/rws/58_nine_of_swords.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/58_nine_of_swords.svg"
+    },
+    {
+        "id":  "59_ten_of_swords",
+        "name_ko":  "소드 10",
+        "name_en":  "Ten of Swords",
+        "arcana":  "swords",
+        "image_url":  "/static/images/rws/59_ten_of_swords.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/59_ten_of_swords.svg"
+    },
+    {
+        "id":  "60_page_of_swords",
+        "name_ko":  "소드 페이지",
+        "name_en":  "Page of Swords",
+        "arcana":  "swords",
+        "image_url":  "/static/images/rws/60_page_of_swords.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/60_page_of_swords.svg"
+    },
+    {
+        "id":  "61_knight_of_swords",
+        "name_ko":  "소드 나이트",
+        "name_en":  "Knight of Swords",
+        "arcana":  "swords",
+        "image_url":  "/static/images/rws/61_knight_of_swords.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/61_knight_of_swords.svg"
+    },
+    {
+        "id":  "62_queen_of_swords",
+        "name_ko":  "소드 퀸",
+        "name_en":  "Queen of Swords",
+        "arcana":  "swords",
+        "image_url":  "/static/images/rws/62_queen_of_swords.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/62_queen_of_swords.svg"
+    },
+    {
+        "id":  "63_king_of_swords",
+        "name_ko":  "소드 킹",
+        "name_en":  "King of Swords",
+        "arcana":  "swords",
+        "image_url":  "/static/images/rws/63_king_of_swords.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/63_king_of_swords.svg"
+    },
+    {
+        "id":  "64_ace_of_pentacles",
+        "name_ko":  "펜타클 에이스",
+        "name_en":  "Ace of Pentacles",
+        "arcana":  "pentacles",
+        "image_url":  "/static/images/rws/64_ace_of_pentacles.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/64_ace_of_pentacles.svg"
+    },
+    {
+        "id":  "65_two_of_pentacles",
+        "name_ko":  "펜타클 2",
+        "name_en":  "Two of Pentacles",
+        "arcana":  "pentacles",
+        "image_url":  "/static/images/rws/65_two_of_pentacles.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/65_two_of_pentacles.svg"
+    },
+    {
+        "id":  "66_three_of_pentacles",
+        "name_ko":  "펜타클 3",
+        "name_en":  "Three of Pentacles",
+        "arcana":  "pentacles",
+        "image_url":  "/static/images/rws/66_three_of_pentacles.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/66_three_of_pentacles.svg"
+    },
+    {
+        "id":  "67_four_of_pentacles",
+        "name_ko":  "펜타클 4",
+        "name_en":  "Four of Pentacles",
+        "arcana":  "pentacles",
+        "image_url":  "/static/images/rws/67_four_of_pentacles.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/67_four_of_pentacles.svg"
+    },
+    {
+        "id":  "68_five_of_pentacles",
+        "name_ko":  "펜타클 5",
+        "name_en":  "Five of Pentacles",
+        "arcana":  "pentacles",
+        "image_url":  "/static/images/rws/68_five_of_pentacles.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/68_five_of_pentacles.svg"
+    },
+    {
+        "id":  "69_six_of_pentacles",
+        "name_ko":  "펜타클 6",
+        "name_en":  "Six of Pentacles",
+        "arcana":  "pentacles",
+        "image_url":  "/static/images/rws/69_six_of_pentacles.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/69_six_of_pentacles.svg"
+    },
+    {
+        "id":  "70_seven_of_pentacles",
+        "name_ko":  "펜타클 7",
+        "name_en":  "Seven of Pentacles",
+        "arcana":  "pentacles",
+        "image_url":  "/static/images/rws/70_seven_of_pentacles.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/70_seven_of_pentacles.svg"
+    },
+    {
+        "id":  "71_eight_of_pentacles",
+        "name_ko":  "펜타클 8",
+        "name_en":  "Eight of Pentacles",
+        "arcana":  "pentacles",
+        "image_url":  "/static/images/rws/71_eight_of_pentacles.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/71_eight_of_pentacles.svg"
+    },
+    {
+        "id":  "72_nine_of_pentacles",
+        "name_ko":  "펜타클 9",
+        "name_en":  "Nine of Pentacles",
+        "arcana":  "pentacles",
+        "image_url":  "/static/images/rws/72_nine_of_pentacles.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/72_nine_of_pentacles.svg"
+    },
+    {
+        "id":  "73_ten_of_pentacles",
+        "name_ko":  "펜타클 10",
+        "name_en":  "Ten of Pentacles",
+        "arcana":  "pentacles",
+        "image_url":  "/static/images/rws/73_ten_of_pentacles.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/73_ten_of_pentacles.svg"
+    },
+    {
+        "id":  "74_page_of_pentacles",
+        "name_ko":  "펜타클 페이지",
+        "name_en":  "Page of Pentacles",
+        "arcana":  "pentacles",
+        "image_url":  "/static/images/rws/74_page_of_pentacles.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/74_page_of_pentacles.svg"
+    },
+    {
+        "id":  "75_knight_of_pentacles",
+        "name_ko":  "펜타클 나이트",
+        "name_en":  "Knight of Pentacles",
+        "arcana":  "pentacles",
+        "image_url":  "/static/images/rws/75_knight_of_pentacles.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/75_knight_of_pentacles.svg"
+    },
+    {
+        "id":  "76_queen_of_pentacles",
+        "name_ko":  "펜타클 퀸",
+        "name_en":  "Queen of Pentacles",
+        "arcana":  "pentacles",
+        "image_url":  "/static/images/rws/76_queen_of_pentacles.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/76_queen_of_pentacles.svg"
+    },
+    {
+        "id":  "77_king_of_pentacles",
+        "name_ko":  "펜타클 킹",
+        "name_en":  "King of Pentacles",
+        "arcana":  "pentacles",
+        "image_url":  "/static/images/rws/77_king_of_pentacles.jpg",
+        "keywords":  {
+                         "upright":  [
+                                         "가능성",
+                                         "전진",
+                                         "명료함"
+                                     ],
+                         "reversed":  [
+                                          "재점검",
+                                          "지연",
+                                          "내면의 과제"
+                                      ]
+                     },
+        "fallback_image_url":  "/static/images/tarot/77_king_of_pentacles.svg"
+    }
+]

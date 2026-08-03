@@ -1,0 +1,39 @@
+﻿[CARD_ID]
+49_king_of_cups
+
+[CARD_NAME_KO]
+컵 킹
+
+[CARD_NAME_EN]
+King of Cups
+
+[ORIENTATION]
+upright
+
+[CORE_KEYWORDS]
+가능성, 전진, 명료함
+
+[CORE_MEANING]
+컵 킹 카드는 에너지가 비교적 자연스럽게 표현되는 흐름 을 상징한다. 질문과 스프레드 자리의 맥락에서 해석한다.
+
+[CURRENT_SITUATION]
+현재 확인 가능한 사실과 감정의 차이를 살핀다.
+
+[PSYCHOLOGY]
+익숙한 반응과 실제 바람을 구분한다.
+
+[LOVE]
+상대의 의도를 단정하지 말고 대화와 행동으로 확인한다.
+
+[CAREER]
+기회와 비용, 준비 수준을 함께 비교한다.
+
+[MONEY]
+구체적인 수치와 감당 가능한 위험을 확인한다.
+
+[ACTION]
+작게 검증할 수 있는 다음 행동을 선택한다.
+
+[WARNING]
+카드 한 장만으로 실제 사건을 확정하지 않는다.
+

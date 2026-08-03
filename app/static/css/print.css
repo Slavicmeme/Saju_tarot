@@ -1,0 +1,22 @@
+@page{size:A4;margin:14mm 13mm 16mm}
+html,body{background:#fff!important;font-size:10.5pt;line-height:1.62;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.no-print{display:none!important}
+.report{max-width:none;padding:0;margin:0}
+.report-head{padding:0 0 8mm;break-after:avoid-page}
+.report-head h1{font-size:27pt;margin:.15em 0}
+.result-section{padding:5mm;margin:4mm 0;box-shadow:none;break-inside:auto}
+.result-section h2,.result-section h3{break-after:avoid-page}
+.result-section p,.result-section li{orphans:3;widows:3}
+.selected-cards,.tarot-card,.plain-saju article,.card-reading-list article{break-inside:avoid-page}
+.tarot-card img{max-height:52mm;width:auto}
+.selected-cards{gap:5mm}
+.result-grid{display:block}
+.result-grid>.result-section{margin:4mm 0}
+.card-reading-list{display:block}
+.card-reading-list article{margin:0 0 4mm;padding:4mm}
+.plain-saju{display:grid;grid-template-columns:repeat(3,1fr);gap:3mm}
+.technical-details{display:none}
+.report blockquote{break-inside:avoid-page;padding:7mm;margin:4mm 0}
+.disclaimer{font-size:8.5pt}
+a{color:inherit;text-decoration:none}
+
