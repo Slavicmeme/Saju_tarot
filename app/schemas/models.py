@@ -3,6 +3,7 @@ from typing import Literal
 from pydantic import BaseModel, Field, field_validator, model_validator
 
 Orientation = Literal["upright", "reversed"]
+ReadingMode = Literal["tarot", "saju", "fusion"]
 
 class Profile(BaseModel):
     nickname: str = Field(default="사용자", max_length=30)
@@ -42,18 +43,28 @@ class SelectedCard(BaseModel):
     orientation: Orientation
 
 class ReadingRequest(BaseModel):
-    profile: Profile
+    reading_mode: ReadingMode = "fusion"
+    profile: Profile | None = None
     question: str = Field(default="", max_length=1000)
     category: str = Field(default="general", max_length=40)
     target_year: int = Field(ge=1900, le=2100)
     target_month: int = Field(ge=1, le=12)
     current_situation: str = Field(default="", max_length=1500)
     spread_type: str = "situation_obstacle_advice"
-    cards: list[SelectedCard]
+    cards: list[SelectedCard] = Field(default_factory=list)
     ai_consent: bool = False
 
     @model_validator(mode="after")
     def validate_content(self):
+        if self.reading_mode in {"saju", "fusion"} and self.profile is None:
+            raise ValueError("사주 분석에는 생년월일 정보가 필요합니다.")
+        if self.reading_mode == "saju":
+            if self.cards:
+                raise ValueError("사주만 보기에서는 타로 카드를 받지 않습니다.")
+            self.spread_type = "saju_only"
+            return self
+        if self.reading_mode == "tarot" and not self.current_situation.strip():
+            raise ValueError("타로만 보기에는 현재 상황이 필요합니다.")
         if not self.question.strip() and self.category == "":
             raise ValueError("질문 또는 상담 분야가 필요합니다.")
         expected = {"one_card": 1, "situation_obstacle_advice": 3, "situation_action_outcome": 3,

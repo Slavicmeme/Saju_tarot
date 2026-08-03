@@ -46,6 +46,29 @@ def test_no_ai_consent_skips_llm(tmp_path, monkeypatch):
     stored = client.get(f"/api/results/{response.json()['result_id']}").json()
     assert stored["llm_diagnostic"]["code"] == "consent_not_given"
 
+def test_tarot_only_does_not_require_profile():
+    drawn = client.post("/api/tarot/draw", json={"count":3,"spread_type":"situation_action_outcome","seed":8}).json()["cards"]
+    response = client.post("/api/reading/generate", json={"reading_mode":"tarot","profile":None,"question":"관계의 흐름은?","current_situation":"최근 관계가 소원해졌습니다.","category":"love",
+        "target_year":2026,"target_month":8,"spread_type":"situation_action_outcome","ai_consent":False,
+        "cards":[{"position":c["position"],"card_id":c["card_id"],"orientation":c["orientation"]} for c in drawn]})
+    assert response.status_code == 200
+    stored = client.get(f"/api/results/{response.json()['result_id']}").json()
+    assert stored["input"]["reading_mode"] == "tarot"
+    assert stored["saju_result"] is None
+    page = client.get(f"/results/{response.json()['result_id']}").text
+    assert "사주 계산 근거와 한계 보기" not in page
+
+def test_saju_only_does_not_require_cards():
+    response = client.post("/api/reading/generate", json={"reading_mode":"saju","profile":profile(),"question":"","category":"general",
+        "target_year":2026,"target_month":8,"spread_type":"saju_only","ai_consent":False,"cards":[]})
+    assert response.status_code == 200
+    stored = client.get(f"/api/results/{response.json()['result_id']}").json()
+    assert stored["input"]["reading_mode"] == "saju"
+    assert stored["cards"] == []
+    page = client.get(f"/results/{response.json()['result_id']}").text
+    assert "선택한 카드" not in page
+    assert "사주 계산 근거와 한계 보기" in page
+
 def test_reading_flow_and_result(tmp_path, monkeypatch):
     import app.repositories.result_repository as result_repository
     monkeypatch.setattr(result_repository, "RESULT_DIR", tmp_path)
