@@ -50,7 +50,7 @@ class ReadingRequest(BaseModel):
     current_situation: str = Field(default="", max_length=1500)
     spread_type: str = "situation_obstacle_advice"
     cards: list[SelectedCard]
-    ai_consent: Literal[True]
+    ai_consent: bool = False
 
     @model_validator(mode="after")
     def validate_content(self):

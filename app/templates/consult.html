@@ -1,2 +1,34 @@
-{% extends "base.html" %}{% block title %}상담 시작 · Magic Tarot{% endblock %}{% block content %}<section class="consult-wrap"><div class="progress"><span class="active">1 정보</span><span>2 카드</span><span>3 결과</span></div><form id="profile-form" class="panel"><h1>어떤 흐름이 궁금한가요?</h1><div class="form-grid"><label>닉네임<input name="nickname" maxlength="30" placeholder="사용자"></label><label>생년월일 *<input name="birth_date" type="text" inputmode="numeric" autocomplete="bday" maxlength="10" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" placeholder="예: 1995-06-10" title="생년월일을 1995-06-10 형식으로 입력해 주세요." required><small class="field-hint">숫자만 입력하면 1995-06-10 형식으로 자동 변환됩니다.</small></label><label>태어난 시간<input name="birth_time" type="time" required></label><label class="check"><input name="time_unknown" type="checkbox"> 출생 시간 모름</label><fieldset><legend>달력 *</legend><label><input type="radio" name="calendar_type" value="solar" checked> 양력</label><label><input type="radio" name="calendar_type" value="lunar"> 음력</label></fieldset><label>성별 *<select name="gender" required><option value="">선택</option><option value="female">여성</option><option value="male">남성</option><option value="other">기타/비공개</option></select></label><label>출생 지역<input name="birth_place" maxlength="80" placeholder="예: 서울"></label><label>분석 연도<input name="target_year" type="number" min="1900" max="2100" required></label><label>분석 월<select name="target_month" required></select></label><label>상담 분야<select name="category"><option value="general">종합운</option><option value="love">연애·관계</option><option value="career">직장·이직</option><option value="business">사업·재물</option><option value="study">학업</option><option value="decision">선택·의사결정</option></select></label></div><label>질문 *<textarea name="question" required maxlength="1000" placeholder="예: 올해 안에 이직을 준비하는 것이 좋을까요?"></textarea></label><label>현재 상황 (선택)<textarea name="current_situation" maxlength="1500" placeholder="판단에 도움이 될 현재 상황을 적어주세요."></textarea></label><label class="ai-consent"><input type="checkbox" name="ai_consent" required> 입력한 질문과 계산된 사주 정보가 AI 해석을 위해 외부 ChatGPT API로 전송되는 것에 동의합니다(동의 하지 않을 경우 룰 기반으로 진행됩니다).</label><button class="button" type="submit">카드 선택으로</button></form><section id="draw-step" class="panel hidden"><h1>마음이 가는 카드 <span id="required-count">5</span>장을 골라주세요</h1><input id="spread-type" type="hidden"><div class="spread-recommendation"><span>상담 분야 추천 배열</span><strong id="spread-name"></strong><p id="spread-guide" class="muted"></p></div><div class="draw-actions"><button id="auto-draw" class="button secondary">자동으로 뽑기</button><button id="reset-draw" class="text-button">전체 초기화</button></div><div id="slots" class="slots"></div><div id="deck" class="deck" aria-label="타로 카드 목록"></div><p id="error" class="error" role="alert"></p><button id="generate" class="button" disabled>융합 해석 시작</button></section><div id="loading" class="loading hidden" role="status"><div class="loader">✦</div><h2>사주와 타로의 흐름을 함께 해석하고 있습니다.</h2><p>잠시만 기다려 주세요.</p></div></section>{% endblock %}{% block scripts %}<script src="/static/js/consult.js"></script>{% endblock %}
-
+{% extends "base.html" %}
+{% block title %}상담 시작 · Magic Tarot{% endblock %}
+{% block content %}
+<section class="consult-wrap">
+  <div class="progress"><span class="active">1 정보</span><span>2 카드</span><span>3 결과</span></div>
+  <form id="profile-form" class="panel">
+    <h1>어떤 흐름이 궁금한가요?</h1>
+    <div class="form-grid">
+      <label>닉네임<input name="nickname" maxlength="30" placeholder="사용자"></label>
+      <label>생년월일 *<input name="birth_date" type="text" inputmode="numeric" autocomplete="bday" maxlength="10" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" placeholder="예: 1995-06-10" title="생년월일을 1995-06-10 형식으로 입력해 주세요." required><small class="field-hint">숫자만 입력하면 1995-06-10 형식으로 자동 변환됩니다.</small></label>
+      <label>태어난 시간<input name="birth_time" type="time" required></label>
+      <label class="check"><input name="time_unknown" type="checkbox"> 출생 시간 모름</label>
+      <fieldset><legend>달력 *</legend><label><input type="radio" name="calendar_type" value="solar" checked> 양력</label><label><input type="radio" name="calendar_type" value="lunar"> 음력</label></fieldset>
+      <label>성별 *<select name="gender" required><option value="">선택</option><option value="female">여성</option><option value="male">남성</option><option value="other">기타/비공개</option></select></label>
+      <label>출생 지역 (기록용)<input name="birth_place" maxlength="80" placeholder="예: 서울"><small class="field-hint">현재 MVP에서는 지역별 진태양시 보정에 사용하지 않습니다.</small></label>
+      <label>분석 연도<input name="target_year" type="number" min="1900" max="2100" required></label>
+      <label>분석 월<select name="target_month" required></select></label>
+      <label>상담 분야<select name="category"><option value="general">종합운</option><option value="love">연애·관계</option><option value="career">직장·이직</option><option value="business">사업·재물</option><option value="study">학업</option><option value="decision">선택·의사결정</option></select></label>
+    </div>
+    <label>질문 *<textarea name="question" required maxlength="1000" placeholder="예: 올해 안에 이직을 준비하는 것이 좋을까요?"></textarea></label>
+    <label>현재 상황 (선택)<textarea name="current_situation" maxlength="1500" placeholder="판단에 도움이 될 현재 상황을 적어주세요."></textarea></label>
+    <label class="ai-consent"><input type="checkbox" name="ai_consent"> 입력한 질문과 계산된 사주 정보가 AI 해석을 위해 외부 ChatGPT API로 전송되는 것에 동의합니다. 동의하지 않으면 외부 전송 없이 규칙 기반으로 진행됩니다.</label>
+    <button class="button" type="submit">카드 선택으로</button>
+  </form>
+  <section id="draw-step" class="panel hidden">
+    <h1>마음이 가는 카드 <span id="required-count">5</span>장을 골라주세요</h1><input id="spread-type" type="hidden">
+    <div class="spread-recommendation"><span>상담 분야 추천 배열</span><strong id="spread-name"></strong><p id="spread-guide" class="muted"></p></div>
+    <div class="draw-actions"><button id="auto-draw" class="button secondary">자동으로 뽑기</button><button id="reset-draw" class="text-button">전체 초기화</button></div>
+    <div id="slots" class="slots"></div><div id="deck" class="deck" aria-label="타로 카드 목록"></div><p id="error" class="error" role="alert"></p><button id="generate" class="button" disabled>융합 해석 시작</button>
+  </section>
+  <div id="loading" class="loading hidden" role="status"><div class="loader">✦</div><h2>사주와 타로의 흐름을 함께 해석하고 있습니다.</h2><p>잠시만 기다려 주세요.</p></div>
+</section>
+{% endblock %}
+{% block scripts %}<script src="/static/js/consult.js"></script>{% endblock %}

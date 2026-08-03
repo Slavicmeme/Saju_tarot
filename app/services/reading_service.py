@@ -62,17 +62,21 @@ async def create_reading(request):
         cards.append({**selected.model_dump(), "name_ko": meta["name_ko"], "name_en": meta["name_en"], "arcana": meta["arcana"], "image_url": meta["image_url"],
                       "keywords": meta["keywords"][selected.orientation], "meaning": meaning_for(selected.card_id, selected.orientation, request.category), "context": context})
     pattern_analysis = analyze_spread(cards, saju)
-    system, prompt = build_prompt(request, saju, cards, pattern_analysis)
     llm_diagnostic = None
-    try:
-        reading = await generate(system, prompt) or fallback_reading(request, saju, cards)
-        mode = "llm" if get_llm_enabled() else "fallback"
-        if mode == "fallback":
-            llm_diagnostic = {"code": "not_configured", "message": "LLM API 키가 설정되지 않아 보조 해석을 사용했습니다."}
-    except Exception as error:
-        llm_diagnostic = classify_llm_error(error)
-        logger.warning("LLM generation failed; using fallback error_type=%s diagnostic_code=%s", type(error).__name__, llm_diagnostic["code"])
-        reading, mode = fallback_reading(request, saju, cards), "fallback_after_llm_error"
+    if not request.ai_consent:
+        reading, mode = fallback_reading(request, saju, cards), "fallback"
+        llm_diagnostic = {"code": "consent_not_given", "message": "AI 전송에 동의하지 않아 외부 전송 없이 보조 해석을 사용했습니다."}
+    else:
+        system, prompt = build_prompt(request, saju, cards, pattern_analysis)
+        try:
+            reading = await generate(system, prompt) or fallback_reading(request, saju, cards)
+            mode = "llm" if get_llm_enabled() else "fallback"
+            if mode == "fallback":
+                llm_diagnostic = {"code": "not_configured", "message": "LLM API 키가 설정되지 않아 보조 해석을 사용했습니다."}
+        except Exception as error:
+            llm_diagnostic = classify_llm_error(error)
+            logger.warning("LLM generation failed; using fallback error_type=%s diagnostic_code=%s", type(error).__name__, llm_diagnostic["code"])
+            reading, mode = fallback_reading(request, saju, cards), "fallback_after_llm_error"
     result_id = str(uuid4())
     payload = {"result_id": result_id, "created_at": datetime.now(KST).isoformat(), "input": request.model_dump(mode="json"),
                "saju_result": saju, "cards": [{k: v for k, v in c.items() if k != "context"} for c in cards], "reading": reading,

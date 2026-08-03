@@ -19,6 +19,32 @@ def test_saju_has_plain_language_summary():
     assert set(data["plain_language"]) == {"personality", "natural_strength", "balance_tip"}
     assert "기운" not in data["summary"]
     assert data["technical_summary"]
+    assert data["calculation_basis"]["region_correction"].startswith("미적용")
+    assert data["professional_useful_element_calculated"] is False
+
+def test_saju_matches_lunar_python_official_example():
+    known = profile()
+    known.update({"birth_date":"1986-05-29", "birth_time":"00:00", "calendar_type":"solar"})
+    response = client.post("/api/saju/calculate", json={"profile":known, "target_year":2026, "target_month":8})
+    assert response.status_code == 200
+    data = response.json()
+    assert data["lunar_birth"] == "1986-04-21"
+    assert data["four_pillars"]["year"] == "병인"
+    assert data["four_pillars"]["month"] == "계사"
+    assert data["four_pillars"]["day"] == "계유"
+
+def test_no_ai_consent_skips_llm(tmp_path, monkeypatch):
+    import app.services.reading_service as reading_service
+    async def should_not_run(*_args):
+        raise AssertionError("LLM must not be called without consent")
+    monkeypatch.setattr(reading_service, "generate", should_not_run)
+    drawn = client.post("/api/tarot/draw", json={"count":3,"spread_type":"situation_action_outcome","seed":4}).json()["cards"]
+    response = client.post("/api/reading/generate", json={"profile":profile(),"question":"질문","category":"career",
+        "target_year":2026,"target_month":8,"spread_type":"situation_action_outcome","ai_consent":False,
+        "cards":[{"position":c["position"],"card_id":c["card_id"],"orientation":c["orientation"]} for c in drawn]})
+    assert response.status_code == 200
+    stored = client.get(f"/api/results/{response.json()['result_id']}").json()
+    assert stored["llm_diagnostic"]["code"] == "consent_not_given"
 
 def test_reading_flow_and_result(tmp_path, monkeypatch):
     import app.repositories.result_repository as result_repository

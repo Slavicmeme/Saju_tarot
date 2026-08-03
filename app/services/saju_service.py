@@ -63,9 +63,10 @@ def calculate_saju(profile, target_year: int, target_month: int) -> dict:
         "day_master": day_master,
         "five_elements": counts,
         "ten_gods": ten_gods,
-        "strength": f"팔자 8글자 기준 {KO[strong]} 기운이 상대적으로 많음",
-        "useful_elements": [KO[weak]],
-        "unfavorable_elements": [KO[strong]],
+        "strength": f"겉으로 드러난 8글자를 단순 집계하면 {KO[strong]} 요소가 상대적으로 많음",
+        "useful_elements": [],
+        "unfavorable_elements": [],
+        "professional_useful_element_calculated": False,
         "major_luck": [],
         "year_luck": {"year": target_year, "gan_zhi": target.getYearInGanZhiExact().translate(HANJA_TO_KO)},
         "month_luck": {"month": target_month, "gan_zhi": target.getMonthInGanZhiExact().translate(HANJA_TO_KO)},
@@ -73,5 +74,17 @@ def calculate_saju(profile, target_year: int, target_month: int) -> dict:
         "plain_language": {"personality": DAY_MASTER_PLAIN[day_master], "natural_strength": strength_plain,
                            "balance_tip": balance_plain},
         "technical_summary": f"년주 {pillars['year']}, 월주 {pillars['month']}, 일주 {pillars['day']}, 시주 {pillars['hour']}, 일간 {day_master}. 오행상 {KO[strong]}가 상대적으로 많고 {KO[weak]}가 적습니다.",
-        "notice": "절기 기준 계산 결과입니다. 출생 시간 미상은 정오로 계산하며, 지역별 진태양시·전문 용신 판정은 포함하지 않습니다."
+        "calculation_basis": {
+            "engine": "lunar_python",
+            "calendar_rule": "입력 달력을 양력·음력으로 변환한 뒤 절기 기준 연주·월주를 계산",
+            "time_basis": "출생 시간 미상으로 12:00 가정" if profile.time_unknown or not profile.birth_time else f"입력 시각 {hour:02d}:{minute:02d}을 표준시 그대로 사용",
+            "region_correction": "미적용 (출생 지역은 기록용)",
+            "element_method": "천간·지지 8글자의 겉오행 단순 개수",
+            "gender_usage": "원국 네 기둥 계산에는 사용하지 않음; 대운 계산은 현재 미구현",
+        },
+        "confidence": {
+            "pillars": "검증 가능한 달력 라이브러리 계산값",
+            "interpretation": "MVP 자기성찰용 참고 해석",
+        },
+        "notice": "절기 기준 원국 계산입니다. 지역별 진태양시, 대운, 지장간·계절 세력, 전문 용신 판정은 포함하지 않습니다. 절입일이나 시각 경계에 가까우면 전문 만세력과 결과가 다를 수 있습니다."
     }
