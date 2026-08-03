@@ -5,4 +5,5 @@ __pycache__/
 .env
 data/results/*.json
 !data/results/.gitkeep
-
+data/agent_sessions/*.json
+!data/agent_sessions/.gitkeep

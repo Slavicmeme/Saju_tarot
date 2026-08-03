@@ -68,6 +68,7 @@ class ReadingRequest(BaseModel):
         if not self.question.strip() and self.category == "":
             raise ValueError("질문 또는 상담 분야가 필요합니다.")
         expected = {"one_card": 1, "situation_obstacle_advice": 3, "situation_action_outcome": 3,
+                    "supplement_two": 2,
                     "past_present_future": 3, "self_other_relationship": 3, "five_card": 5,
                     "celtic_cross": 10, "relationship_seven": 7, "career_five": 5,
                     "money_five": 5, "study_five": 5, "decision_five": 5}.get(self.spread_type)
@@ -76,3 +77,20 @@ class ReadingRequest(BaseModel):
         if len({c.card_id for c in self.cards}) != len(self.cards):
             raise ValueError("같은 카드는 중복 선택할 수 없습니다.")
         return self
+
+class AgentSessionCreate(BaseModel):
+    ai_consent: Literal[True]
+
+class AgentMessageRequest(BaseModel):
+    message: str = Field(min_length=1, max_length=1500)
+
+class AgentDrawConfirm(BaseModel):
+    kind: Literal["main", "continue", "supplement"] = "main"
+    count: Literal[1, 2, 3] | None = None
+    proposal_id: str | None = Field(default=None, max_length=50)
+
+class AgentCardsRequest(BaseModel):
+    cards: list[SelectedCard]
+
+class AgentSajuRequest(SajuRequest):
+    pass

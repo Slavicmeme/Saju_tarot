@@ -69,6 +69,26 @@ def test_saju_only_does_not_require_cards():
     assert "선택한 카드" not in page
     assert "사주 계산 근거와 한계 보기" in page
 
+def test_tarot_and_saju_pdf_downloads_handle_optional_profile(monkeypatch):
+    import app.api.routes as routes
+    monkeypatch.setattr(routes, "render_result_pdf", lambda _url: b"%PDF-1.4\nmock")
+
+    drawn = client.post("/api/tarot/draw", json={"count":3,"spread_type":"situation_action_outcome","seed":12}).json()["cards"]
+    tarot = client.post("/api/reading/generate", json={"reading_mode":"tarot","profile":None,"question":"","current_situation":"새로운 선택을 고민하고 있습니다.","category":"decision",
+        "target_year":2026,"target_month":8,"spread_type":"situation_action_outcome","ai_consent":False,
+        "cards":[{"position":c["position"],"card_id":c["card_id"],"orientation":c["orientation"]} for c in drawn]}).json()
+    tarot_pdf = client.get(f"/api/results/{tarot['result_id']}/pdf")
+    assert tarot_pdf.status_code == 200
+    assert tarot_pdf.headers["content-type"] == "application/pdf"
+    assert "magic-tarot_user_" in tarot_pdf.headers["content-disposition"]
+
+    saju = client.post("/api/reading/generate", json={"reading_mode":"saju","profile":profile(),"question":"","category":"general",
+        "target_year":2026,"target_month":8,"spread_type":"saju_only","ai_consent":False,"cards":[]}).json()
+    saju_pdf = client.get(f"/api/results/{saju['result_id']}/pdf")
+    assert saju_pdf.status_code == 200
+    assert saju_pdf.headers["content-type"] == "application/pdf"
+    assert "%ED%85%8C%EC%8A%A4%ED%84%B0" in saju_pdf.headers["content-disposition"]
+
 def test_reading_flow_and_result(tmp_path, monkeypatch):
     import app.repositories.result_repository as result_repository
     monkeypatch.setattr(result_repository, "RESULT_DIR", tmp_path)

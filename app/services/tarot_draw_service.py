@@ -3,6 +3,7 @@ from app.repositories.tarot_repository import get_cards
 
 SPREADS = {
     "one_card": ["핵심 메시지"],
+    "supplement_two": ["확인할 핵심 변수", "현실적인 조언"],
     "situation_obstacle_advice": ["현재 상황", "방해 요소", "실천 조언"],
     "situation_action_outcome": ["현재 상황", "권장 행동", "예상 결과"],
     "past_present_future": ["과거의 영향", "현재의 핵심", "이어질 흐름"],

@@ -10,6 +10,7 @@ class Settings(BaseSettings):
     llm_api_key: str = ""
     llm_base_url: str = "https://api.openai.com/v1"
     llm_model: str = "gpt-4o-mini"
+    agent_llm_model: str = "gpt-4.1-mini"
     llm_timeout: float = 120
     llm_max_completion_tokens: int = 8000
     result_ttl_hours: int = 24
